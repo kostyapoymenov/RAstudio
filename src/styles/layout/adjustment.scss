@@ -1,0 +1,103 @@
+.wrapper {
+  width: 100%;
+  max-width: rem(1920px);
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn {
+  background-color: $red;
+  font-family: 'gothamPro';
+  @include font-size(22px);
+  font-weight: 700;
+  border-top-left-radius: rem(35px);
+  border-bottom-left-radius: rem(35px);
+  border-bottom-right-radius: rem(35px);
+  border-top-right-radius: rem(35px);
+  padding: rem(25px) rem(40px);
+  display: inline-block;
+  color: #ffffff;
+  line-height: 1;
+  border:2px solid transparent;
+  transition: all .3s;
+  &:hover {
+    background-color: transparent;
+    border:2px solid $white;
+  }
+}
+
+.main-title {
+  position: relative;
+  font-family: 'gothamPro';
+  @include font-size(66px);
+  font-weight: 700;
+  color: $darkBlue;
+  &.main-title--white {
+    color: $white;
+  }
+  &.main-title--center {
+    text-align: center;
+  }
+  &.main-title--line {
+    &::before{
+      content: '';
+      width: rem(120px);
+      height:2px;
+      background-color: $red;
+      position: absolute;
+      right: 110%;
+      top:50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.section-title {
+  grid-area: main-title;
+}
+
+.place-grid {
+  display: grid;
+  grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    ". . . . . . main-title main-title main-title main-title main-title main-title main-title . . . . . . ."
+    ". . . . . . place-text place-text place-text place-text place-text place-text place-text . bt bt bt . . ."
+    "bs bs bs bs bs bs bs bs bs bs bs bs bs . . . . . . ."
+    ". . . . . . ib ib ib ib ib ib ib . . . . . . ."
+    ". . . . ip ip ip ip ip ip ip ip ip ip ip ip ip . . ."
+    ". . . . cl cl cl cl cl cl . cr cr cr cr cr cr cr cr cr";
+}
+
+.text {
+  font-family: 'Roboto';
+  @include font-size(20px);
+  font-weight: 300;
+  color: $darkGrey;
+  line-height:2;
+  padding-bottom: 6%;
+}
+
+.span-bold {
+  font-family: 'Roboto';
+  @include font-size(20px);
+  font-weight: 700;
+}
+
+.consult-grid {
+  display: grid;
+  grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+  grid-template-rows: auto;
+  grid-template-areas:
+          ". . . . cl  cl cl cl cl cl . cr cr cr cr cr cr cr cr cr cr";
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+  grid-template-rows: auto;
+  grid-template-areas:
+          ". line line line line line line line line line line line line line line line line line line line"
+          ". . . . .  foo  foo  foo  foo  foo  foo  foo  foo  foo  foo  foo  foo  foo . .";
+}
